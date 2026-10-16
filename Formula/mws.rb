@@ -5,23 +5,23 @@
 class Mws < Formula
   desc "Manage meta workspaces around independent native git repos"
   homepage "https://github.com/sustinbebustin/mws"
-  version "0.7.0"
+  version "0.8.0"
   license "MIT"
 
   depends_on "git"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/sustinbebustin/mws/releases/download/v0.7.0/mws_0.7.0_darwin_amd64.tar.gz"
-      sha256 "a0f1ec471e5c3c58d144ef92f1d52ad723cbc2f07e0d0d833c1111a443f9f97d"
+      url "https://github.com/sustinbebustin/mws/releases/download/v0.8.0/mws_0.8.0_darwin_amd64.tar.gz"
+      sha256 "c50dc5363e5c9925d9a2a0580ee13fc4728fce5061ae0b1da70ad5cf827a59e3"
 
       define_method(:install) do
         bin.install "mws"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/sustinbebustin/mws/releases/download/v0.7.0/mws_0.7.0_darwin_arm64.tar.gz"
-      sha256 "ac510ed7db5c477d4c45567a75e07f37576c5edda1acf0f6b78d51b3ec93a4e4"
+      url "https://github.com/sustinbebustin/mws/releases/download/v0.8.0/mws_0.8.0_darwin_arm64.tar.gz"
+      sha256 "42bd74cfe6565a9707c677ef28f51e793cc6e8791f2865f2156c4f65e618351b"
 
       define_method(:install) do
         bin.install "mws"
@@ -31,19 +31,26 @@ class Mws < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/sustinbebustin/mws/releases/download/v0.7.0/mws_0.7.0_linux_amd64.tar.gz"
-      sha256 "16903f60ebcfe866fa38e141da910cc74db28aad3560b95bdee372d0385e334c"
+      url "https://github.com/sustinbebustin/mws/releases/download/v0.8.0/mws_0.8.0_linux_amd64.tar.gz"
+      sha256 "d5ae0c401582a5499835d75bc554d2869e595bc70bbead791a54bef92a593d23"
       define_method(:install) do
         bin.install "mws"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/sustinbebustin/mws/releases/download/v0.7.0/mws_0.7.0_linux_arm64.tar.gz"
-      sha256 "29c59bfafe8661820f35f64758f4bdb90b1f3379ad447c72c689d8097d58395d"
+      url "https://github.com/sustinbebustin/mws/releases/download/v0.8.0/mws_0.8.0_linux_arm64.tar.gz"
+      sha256 "da62da834369787c9b6de5f1a9be185105932865257fbdfa4218fe2eef198e30"
       define_method(:install) do
         bin.install "mws"
       end
     end
+  end
+
+  def caveats
+    <<~EOS
+      To cd into a working copy after `mws clone` or `mws restore`, run:
+        mws shell-init --install
+    EOS
   end
 
   test do

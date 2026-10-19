@@ -5,28 +5,28 @@
 class Hush < Formula
   desc "Secret store that lets coding agents use secrets without seeing them"
   homepage "https://github.com/sustinbebustin/hush"
-  version "0.2.0"
+  version "0.2.1"
   license "MIT"
 
   on_macos do
     on_arm do
-      url "https://github.com/sustinbebustin/hush/releases/download/v0.2.0/hush-darwin-arm64"
-      sha256 "71dc23d9a83276779be0f6c91eb39a9309223aa466bec7d91e99c2a1fbd38a85"
+      url "https://github.com/sustinbebustin/hush/releases/download/v0.2.1/hush-darwin-arm64"
+      sha256 "c8bcf92a1819dbd5d28e2f7b89063fbaa90159b64779e4b150577270385ab5fd"
     end
     on_intel do
-      url "https://github.com/sustinbebustin/hush/releases/download/v0.2.0/hush-darwin-x64"
-      sha256 "0ac0cdc0198f4cf0da5a0803f027c68a7702349bebda6d9e97a6037442a0075d"
+      url "https://github.com/sustinbebustin/hush/releases/download/v0.2.1/hush-darwin-x64"
+      sha256 "f1edf8365dfd3d8b784005c39682aa012409aa4a2be7b28bdf16af87ff34b355"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://github.com/sustinbebustin/hush/releases/download/v0.2.0/hush-linux-arm64"
-      sha256 "80315573ed35f61ebe362c6ebd74dda856bba12b3cda66ff232c3580a35f54b5"
+      url "https://github.com/sustinbebustin/hush/releases/download/v0.2.1/hush-linux-arm64"
+      sha256 "59c64da0bcdcd5531c23aaa6d73c11f688285db51dff73a064563cf4fc5272fa"
     end
     on_intel do
-      url "https://github.com/sustinbebustin/hush/releases/download/v0.2.0/hush-linux-x64"
-      sha256 "6ea9447369007e0906886781f6b9eebbde7897a2930169b3bce6d5d9c0b3fb25"
+      url "https://github.com/sustinbebustin/hush/releases/download/v0.2.1/hush-linux-x64"
+      sha256 "d0eeff75c1fafd09561e86da9fdb678e62cad07cebcd36d24b673069eb921ceb"
     end
   end
 
